@@ -1,0 +1,42 @@
+.flex-container {
+    width: 100%;
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.dark-mode {
+    background-color: #010101;
+}
+
+.box {
+    margin: 10px 0 10px 0;
+    padding: 10px;
+}
+
+.gray{
+    background-color: #A9A9A9;
+}
+.green{
+    background-color: #39FF14;
+}
+.yellow{
+    background-color: #FFD700;
+}
+.plum{
+    background-color: #DDA0DD;
+}
+.violet{
+    background-color: #9400D3;
+}
+.blue{
+    background-color: #87CEEB;
+}
+.brown{
+    background-color: #F0E68C;
+}
+.pink{
+    background-color: #FFC0CB;
+}
