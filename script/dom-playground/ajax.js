@@ -1,7 +1,3 @@
-window.onload = function () {
-    getDomPlayGround();
-}
-
 let getDomPlayGround = function getDomPlaygGroundHandler() {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -16,5 +12,4 @@ let getDomPlayGround = function getDomPlaygGroundHandler() {
     xhttp.send();
 }
 
-// Function to execute JavaScript code in the loaded content
 
