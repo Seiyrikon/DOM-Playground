@@ -1,7 +1,3 @@
-window.onload = function () {
-    getTopNavigation();
-}
-
 let getTopNavigation = function getTopNavigationHandler() {
     let xhttp = new XMLHttpRequest();
 
