@@ -1,31 +1,4 @@
-function initializeLoadedContent() {
-    const colorArray = [
-        "#39FF14",  // Neon Green
-        "#FF6AC1",  // Neon Pink
-        "#00FFFF",  // Cyan
-        "#FFD700",  // Neon Yellow
-        "#FF1493",  // Deep Pink
-        "#00FF7F",  // Spring Green
-        "#FF4500",  // Neon Red-Orange
-        "#FFA500",  // Neon Orange
-        "#7FFF00",  // Chartreuse
-        "#9400D3",  // Dark Violet
-        "#FFD1DC",  // Pastel Pink
-        "#A9A9A9",  // Dark Gray
-        "#87CEEB",  // Sky Blue
-        "#FFD700",  // Gold
-        "#FFC0CB",  // Pink
-        "#98FB98",  // Pale Green
-        "#B0E0E6",  // Powder Blue
-        "#DDA0DD",  // Plum
-        "#ADD8E6",  // Light Blue
-        "#F0E68C",  // Khaki
-    ];
-
-    let getRandomNumber = function randomNumberHandler(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-
+let initializeLoadedContent = function initializeLoadedContentHandler() {
     //gets the elements in the DOM using getElementById function
     const main = document.querySelector('main');
     const body = document.getElementById("body");
@@ -39,14 +12,18 @@ function initializeLoadedContent() {
     randomColorButton.addEventListener("click", function () {
         //gets a random color on the colorArray using the getRandomNumber function
         //both the colorArray and getRandomNumber function can be found on utils.js
-        let newColor = colorArray[getRandomNumber(0, colorArray.length - 1)];
+        const colors = domPlaygroundUtilities.colorArray;
+        const colorsLength = colors.length - 1;
+        const randomNumber = domPlaygroundUtilities.getRandomNumber(0, colorsLength);
+        let newColor = colors[randomNumber];
+
 
         //prevents the body to have it's current color as new color
         if (body.style.color !== newColor) {
             body.style.color = newColor;
         } else {
             while (body.style.color === newColor) {
-                newColor = colorArray[getRandomNumber(0, colorArray.length - 1)];
+                newColor = domPlaygroundUtilities.colorArray[domPlaygroundUtilities.getRandomNumber(0, colorArray.length - 1)];
                 body.style.color = newColor;
             }
         }
