@@ -1,5 +1,9 @@
-function loadDoc() {
-    var xhttp = new XMLHttpRequest();
+window.onload = function () {
+    getDomPlayGround();
+}
+
+let getDomPlayGround = function getDomPlaygGroundHandler() {
+    let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("content").innerHTML = this.responseText;
@@ -8,7 +12,7 @@ function loadDoc() {
             initializeLoadedContent();
         }
     };
-    xhttp.open("GET", "/template/DomPlayground.html", true);
+    xhttp.open("GET", "/template/components/DomPlayground.html", true);
     xhttp.send();
 }
 
